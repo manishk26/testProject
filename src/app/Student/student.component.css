@@ -1,0 +1,50 @@
+*{
+	box-sizing: border-box;
+}
+.wrapper{
+	width:50%;
+	margin:100px auto;
+	background: pink;
+	text-align: center;
+	padding: 5px;
+	font-size: 1.3em;
+}
+.row::after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+.col-25{
+	display: inline-block;
+	float: left;
+	width:25%;
+	margin-top: 7px;
+}
+.col-75{
+	float: left;
+	width:75%;
+	margin-top: 7px;
+}
+.linkDiv{
+	margin-top: 7px;
+}
+input{
+	width: 100%;
+	font-size: 1em;
+	overflow: hidden;
+	padding: 5px;
+}
+input[type="button"]{
+	margin-top: 7px;
+	width:20%;
+}
+@media(max-width: 600px)
+{
+	.col-25,.col-75,input[type="button"],.linkDiv{
+		width: 100%;
+	}
+
+	.linkDiv > a {
+		display: block;
+	}
+}
